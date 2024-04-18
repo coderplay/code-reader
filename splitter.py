@@ -6,10 +6,25 @@ from langchain_text_splitters.character import RecursiveCharacterTextSplitter
 
 
 class LanguageSplitter(RecursiveCharacterTextSplitter):
-    """Attempts to split the code along the syntax implied by its file suffix."""
+    """
+    A class that splits text based on language.
+
+    Inherits from RecursiveCharacterTextSplitter.
+
+    Methods:
+        split_documents(documents: Iterable[Document]) -> List[Document]: Splits the documents based on language.
+    """
 
     def split_documents(self, documents: Iterable[Document]) -> List[Document]:
-        """Split documents."""
+        """
+        Splits the documents based on language.
+
+        Args:
+            documents (Iterable[Document]): The documents to be split.
+
+        Returns:
+            List[Document]: The list of split documents.
+        """
         new_documents = []
         for doc in documents:
             text = doc.page_content
@@ -29,4 +44,3 @@ class LanguageSplitter(RecursiveCharacterTextSplitter):
                 new_document = Document(page_content=chunk, metadata=new_metadata)
                 new_documents.append(new_document)
         return new_documents
-
