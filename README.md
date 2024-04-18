@@ -29,4 +29,3 @@ The script performs the following steps:
 6. Asks the user a question about the code.
 7. Invokes the retrieval chain with the user's question and prints the answer.
 
-The script uses the `argparse` library for argument parsing, the `Chroma` class from the `langchain_chroma` module to interact with the ChromaDB database, the `OpenAIEmbeddings` and `ChatOpenAI` classes from the `langchain_openai` module to generate the search query, the `create_history_aware_retriever` and `create_retrieval_chain` functions from the `langchain.chains
