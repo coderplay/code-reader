@@ -39,7 +39,7 @@ def main():
         search_kwargs={"k": 8},
     )
 
-    llm = ChatOpenAI(model="gpt-4")
+    llm = ChatOpenAI(model="gpt-3.5-turbo")
 
     # First we need a prompt that we can pass into an LLM to generate this search query
     prompt = ChatPromptTemplate.from_messages(

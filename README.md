@@ -1,5 +1,22 @@
 # Documentation
 
+## Example Usage
+
+```
+$ python ingest-code.py ~/code/pebble/ ./chroma-pebble 
+
+$ python query-code.py ./chroma-pebble 
+Ask a question about the code: Please summarize the implementation of Pebble.
+100%|██████████| 1/1 [00:00<00:00,  2.99it/s]
+Pebble is a key-value store implemented in Go that provides efficient storage and retrieval of key-value pairs. 
+It uses an LSM (Log-Structured Merge-tree) storage engine for data organization. Pebble supports features like batch 
+writes, snapshots, range deletions, and iterators for traversal over key-value data. It also includes optimizations
+for efficient reads and writes, such as deferred batch operations and deletion pacing. The implementation includes 
+structures like pebbleDB, pebbleVersions, and various methods for handling data operations and internal key management.
+
+Overall, Pebble aims to provide a high-performance and reliable key-value store for applications.
+```
+
 ## Pre-requisites
 * Setup the OPENAI_API_KEY in your environment variables
 
